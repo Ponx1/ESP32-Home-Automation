@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Esp32WebServer</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+
+  <head>
+    <div class="title">
+      <h1 id="Title">Chimuela & Morita's home</h1>
+    </div>
+  </head>
+
+  <body>
+    <div>
+      <div class="buttonGroup">
+        <p class="description">Living Room</p>
+        <button class="button" type="button" id = "btn0" onclick="turnRelay('LivingRoom')">Toggle</input>
+      </div>
+      <div class="buttonGroup">
+        <p class="description">Kitchen</p>
+        <button class="button" type="button" onclick="turnRelay('Kitchen')">Toggle</input>
+      </div>
+      <div class="buttonGroup">
+        <p class="description">Office</p>
+        <button class="button" type="button" onclick="turnRelay('Office')">Toggle</input>
+      </div>
+      <div class="buttonGroup">
+        <p class="description">Room</p>
+        <button class="button" type="button" onclick="turnRelay('Room')">Toggle</input>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="description">Made by Chimuela for Esp32</p>
+    </div>
+  </body>
+  <!-- partial -->
+
+</body>
+
+<script>
+
+  var xmlHttp=createXmlHttpObject();
+    // function to create XML object
+  function createXmlHttpObject(){
+    if(window.XMLHttpRequest){
+      xmlHttp=new XMLHttpRequest();
+    }
+    else{
+      xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    return xmlHttp;
+  }
+  function turnRelay(roomName){
+    console.log("Sending request for: " + roomName)
+    xhttp.open("PUT", roomName, false);
+    xhttp.send();
+  }
+</script>
+
+</html>

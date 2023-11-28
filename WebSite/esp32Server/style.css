@@ -1,0 +1,43 @@
+.button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  margin: 5px 5px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: green;
+}
+
+.buttonGroup {
+  background-color: lightgray;
+  padding: 10px 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15px;
+  width: 50%;
+  text-align: center;
+}
+
+.description {
+  font-family: Lato, Calibri, Arial;
+  font-size: 18px;
+}
+
+.title{
+  margin: auto;
+  text-align: center;
+}
+
+#Title{
+  font-family: Lato, Calibri, Arial;
+}
+
+.footer{
+  text-align: right;
+  margin: 5% 5%
+}
